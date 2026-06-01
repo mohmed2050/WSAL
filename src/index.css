@@ -1,0 +1,91 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=Be+Vietnam+Pro:wght@400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --color-primary: #005f48;
+  --color-primary-container: #007a5e;
+  --color-on-primary-container: #a4ffdd;
+  --color-on-primary: #ffffff;
+  --color-secondary: #ba002a;
+  --color-secondary-container: #e2213d;
+  --color-on-secondary-container: #fffbff;
+  --color-tertiary: #6b4e0d;
+  --color-tertiary-fixed: #ffdea5;
+  --color-background: #fbf9f4;
+  --color-on-background: #1b1c19;
+  --color-surface: #fbf9f4;
+  --color-on-surface: #1b1c19;
+  --color-on-surface-variant: #3e4944;
+  --color-surface-container: #f0eee9;
+  --color-surface-container-low: #f5f3ee;
+  --color-surface-container-high: #eae8e3;
+  --color-surface-container-highest: #e4e2dd;
+  --color-surface-container-lowest: #ffffff;
+  --color-outline: #6e7a74;
+  --color-outline-variant: #bdc9c2;
+  
+  --font-sans: "IBM Plex Sans", "Inter", sans-serif;
+  --font-display: "Be Vietnam Pro", sans-serif;
+}
+
+@layer utilities {
+  /* Subtle Sudanese Pattern Overlay */
+  .sudanese-pattern {
+    background-color: #fbf9f4;
+    background-image:  
+      linear-gradient(30deg, #f0eee9 12%, transparent 12.5%, transparent 87%, #f0eee9 87.5%, #f0eee9), 
+      linear-gradient(150deg, #f0eee9 12%, transparent 12.5%, transparent 87%, #f0eee9 87.5%, #f0eee9), 
+      linear-gradient(30deg, #f0eee9 12%, transparent 12.5%, transparent 87%, #f0eee9 87.5%, #f0eee9), 
+      linear-gradient(150deg, #f0eee9 12%, transparent 12.5%, transparent 87%, #f0eee9 87.5%, #f0eee9), 
+      linear-gradient(60deg, #e4e2dd 25%, transparent 25.5%, transparent 75%, #e4e2dd 75%, #e4e2dd), 
+      linear-gradient(60deg, #e4e2dd 25%, transparent 25.5%, transparent 75%, #e4e2dd 75%, #e4e2dd);
+    background-size: 80px 140px;
+    background-position: 0 0, 0 0, 40px 70px, 40px 70px, 0 0, 40px 70px;
+  }
+
+  .pattern-bg {
+    background-color: #fbf9f4;
+    background-image: radial-gradient(#bdc9c2 0.7px, transparent 0.7px);
+    background-size: 24px 24px;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+
+  .custom-shadow {
+    box-shadow: 0 10px 30px -10px rgba(30, 58, 95, 0.08);
+  }
+
+  .dashed-border {
+    position: relative;
+    border-radius: 16px;
+    background-image: url("data:image/svg+xml,%3csvg width='100%25' height='100%25' xmlns='http://www.w3.org/2000/svg'%3e%3crect width='100%25' height='100%25' fill='none' rx='16' ry='16' stroke='%236B4E0DFF' stroke-width='2' stroke-dasharray='8%2c 12' stroke-dashoffset='0' stroke-linecap='square'/%3e%3c/svg%3e");
+  }
+
+  .gradient-mesh {
+    background: radial-gradient(circle at 10% 20%, rgba(0, 95, 72, 0.04) 0%, transparent 40%),
+                radial-gradient(circle at 90% 80%, rgba(186, 0, 42, 0.04) 0%, transparent 40%);
+  }
+}
+
+@keyframes radar-pulse {
+  0% { transform: scale(1); opacity: 0.8; }
+  100% { transform: scale(3.5); opacity: 0; }
+}
+
+.radar-circle {
+  animation: radar-pulse 3s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+@keyframes scan {
+  0% { transform: translateY(0); opacity: 0.2; }
+  50% { transform: translateY(240px); opacity: 1; }
+  100% { transform: translateY(0); opacity: 0.2; }
+}
+
+.scan-anim-line {
+  animation: scan 4s infinite linear;
+}

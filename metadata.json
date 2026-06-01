@@ -1,0 +1,6 @@
+{
+  "name": "Wasl",
+  "description": "Wasl is a premium Sudanese file transfer application designed for fast, offline-first connectivity in Sudan.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
