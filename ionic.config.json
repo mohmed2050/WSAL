@@ -1,5 +1,6 @@
 {
   "name": "WSAL",
   "integrations": {},
-  "type": "vue-vite"
+  "type": "vue-vite",
+  "id": "eb438a36"
 }

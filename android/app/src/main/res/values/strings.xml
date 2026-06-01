@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">WASL</string>
+    <string name="title_activity_main">WASL</string>
+    <string name="package_name">com.mohamed.wasl</string>
+    <string name="custom_url_scheme">com.mohamed.wasl</string>
+</resources>
